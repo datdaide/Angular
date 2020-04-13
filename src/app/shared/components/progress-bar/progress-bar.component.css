@@ -1,0 +1,16 @@
+.progress-bar-container,
+.progress-percent{
+    width:50%;
+    height:10px;
+    border-radius: 20px;
+}
+
+
+.progress-bar-container{
+    background-color: #ececec;
+    display: inline-block;
+}
+
+.progress-percent{
+    background-color: #1cb3a3;
+}

@@ -1,0 +1,10 @@
+.shop-module-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.shop-list{
+    width:200px;
+    padding: 12px;
+}

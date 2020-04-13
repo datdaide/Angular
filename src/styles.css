@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+html,body{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eef0f0;
+    font-size: 12px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.clean{
+    background-color: transparent;
+    border:none;
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.page-container{
+    height:100vh;
+    display: grid;
+    /* flex-direction: column;       */
+    grid-template-rows: 50px auto;
+}
+
+main{
+    min-height: 200px;
+    display:grid;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 200px auto;
+}
+
+.content-container{
+    overflow:auto;
+    grid-row:2/2;
+    grid-column: 2/2;
+}
+
+.arrow-down{
+    display: inline-block;
+    width:16px;
+    height:8px;
+}
+
+.arrow-down:before{
+    content:'';
+    width:0;
+    height:0;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top:8px solid white;
+    position: absolute;;
+}
+
+.sidebar{
+    position: fixed;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    min-width: 200px;
+    background-color: #181824;
+    box-shadow: 6px 0 6px rgba(0,0,0,.1);
+    width:160px;
+}
+
+.g-selected{
+    background-color:#1976d2 ;
+    color:White;
+}

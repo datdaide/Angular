@@ -1,0 +1,45 @@
+
+.list-shop-container{
+    background: linear-gradient(to bottom right, #389466, #42b883);
+    border-radius: 6px;
+    padding: 16px 12px;
+    height:100%;
+    color:white;
+}
+
+hr{
+    border-top: 1px solid white;
+}
+
+.shop-item{
+    display:grid;
+    grid-template-columns: 50px auto;
+    /* grid-template-rows: 38px 20px; */
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    width:100%
+}
+
+.shop-item.g-selected{
+    margin-left:20px;
+}
+
+.shop-item:hover:not(.g-selected){
+    background-color:#eeeeee;
+}
+
+
+.shop-img{
+    height: 50px;
+}
+
+.shop-name{
+    display: flex;
+    padding:0 6px;
+}
+
+.shop-name > *{
+    align-self: center;
+}

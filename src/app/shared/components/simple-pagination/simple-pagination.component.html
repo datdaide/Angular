@@ -1,0 +1,9 @@
+<div class="page-item-container">
+  <i class="fas fa-arrow-left" (click)="previousPage()"></i>
+  <div class="page-item-list">
+    <ng-container *ngFor="let pageNumber of reviewPageList">
+      <span class="pg {{pageNumber == pagination.currentPage ? 'selected' : ''}}" (click)="onPageClick(pageNumber)"> {{ pageNumber }}</span>
+    </ng-container>
+  </div>
+  <i class="fas fa-arrow-right" (click)="nextPage()"></i>
+</div>

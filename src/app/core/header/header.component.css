@@ -1,0 +1,86 @@
+:host{
+    background-color: #1976d2;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    padding: 5px 0;
+}
+
+.header{
+    height: 100%;
+    display: flex;
+    padding: 0 12px;
+    align-items: center;
+}
+
+.header > *:not(.right-section){
+    cursor: pointer;
+}
+
+.hamburger{
+    display: inline-block;
+    -webkit-user-select: none;
+    user-select: none;
+    align-self: center;
+    margin-right:6px;
+    cursor: pointer;
+}
+
+.hamburger > span{
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+.hamburger > span:first-child{
+    margin-top: 5px;
+}
+
+.logo{
+    height: 40px;
+}
+
+.logo img {
+    max-height: 100%;
+}
+
+.setting-container{
+    display: flex;
+    margin-left: auto;
+}
+
+.setting-container > .name{
+    color:white;
+    font-weight: bold;
+    margin-right:6px;
+}
+
+.setting-container > *{
+    align-self: center;
+}
+
+.circle{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+.right-section{
+    margin-left: auto;
+    display: flex;
+}
+
+.right-section > * {
+    margin-right: 12px;
+    cursor: pointer;
+}

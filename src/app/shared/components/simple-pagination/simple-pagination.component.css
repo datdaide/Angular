@@ -1,0 +1,39 @@
+.page-item-container{
+    display:grid;
+    grid-template-columns: 20px auto 20px;
+    justify-items: center;
+    padding: 0 6px;
+    grid-column-gap: 8px;
+}
+
+.page-item-container > * {
+    align-self: center;
+}
+
+.page-item-container > i{
+    cursor: pointer;
+}
+
+.pg{
+    display: inline-block;
+    text-align: center;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border:1px solid #eeeeee;
+    background-color: #354a61;
+    color:white;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.pg.selected{
+    background-color: wheat;
+    color:#354a61;
+    font-weight: bold;
+}
+
+.page-item-list {
+    display: flex;
+}

@@ -1,0 +1,62 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>{{title}}</h2> <span> (0 - 0 of {{this.pagination.totalItem}}) </span>
+            </div>
+            <div class="col-md-4">
+                <pagination [totalItem]="filteredDevices.length" 
+                            (onChange)="paginationChangesReceiver($event)"></pagination>
+                <!-- <simple-pagination [totalItem]="filteredDevices.length" [pageSize]="1"
+                (onChange)="paginationChangesReceiver($event)"></simple-pagination> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Filter by <input type="text" [(ngModel)]='filterString' /></div>
+        </div>
+        <table class="table-responsive">
+            <thead>
+                <th><input type="checkbox" (change)='wholeCheckboxControlChange($event)' /></th>
+                <th>Device name</th>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>os version</th>
+                <th>battery status</th>
+                <th>available memory</th>
+                <th>phone number</th>
+                <th>username</th>
+                <th>mac address</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let device of filteredDevices">
+                    <td><input type="checkbox" [checked]="device.isChecked"  /></td>
+                    <td>{{ device.deviceName }}</td>
+                    <td>{{ device.manufacturer }}</td>
+                    <td>{{ device.model }}</td>
+                    <td>{{ device.os }}</td>
+                    <td>
+                        <d-progress-bar [currentValue]="device.battery" [capacityValue]="100" ></d-progress-bar> {{ device.battery + "%" }}
+                    </td>
+                    <td>
+                        <d-progress-bar [currentValue]="device.memory" [capacityValue]="device.memoryCapacity" ></d-progress-bar>  {{ device.memory + " / " + device.memoryCapacity }}
+                    </td>
+                    <td>{{ device.phoneNumber | defaultWhenNull }}</td>
+                    <td>{{ device.username | defaultWhenNull }}</td> 
+                    <td>{{ device.macAddress | defaultWhenNull  }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

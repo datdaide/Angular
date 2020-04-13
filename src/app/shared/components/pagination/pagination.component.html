@@ -1,0 +1,15 @@
+<div class="pagination-container">
+  <d-simple-dropdown
+      [items]="defaultPageSizes" 
+      [defaultIndex]="defaultPageSizeIndex" 
+      (onChanged)="onPageSizeChanged($event)"
+    ></d-simple-dropdown>
+  <span class="text">per page</span>
+  <simple-pagination [pageSize]="pageSize" 
+                      [totalItem]="totalItem"
+                      (onChange)="paginationChangeReceiver($event)"></simple-pagination>
+  <div class="go-to-page-container">
+    <input class="clean" maxlength="5" type="text" />
+    <button>Go</button>
+  </div>
+</div>

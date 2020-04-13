@@ -1,0 +1,10 @@
+<div class="list-shop-container">
+  <h3>Shop</h3>
+  <hr/>
+  <a *ngFor="let shop of shops" [routerLink]="['/shops',shop._id]" ><div  class="shop-item {{shop._id == selectedShopId ? 'g-selected' : ''}}" (click)="onShopClick(shop._id)">
+    <div class="shop-img"></div>
+    <div class="shop-name">
+      <span>{{shop.shopName}}</span>
+    </div>
+  </div></a>
+</div>

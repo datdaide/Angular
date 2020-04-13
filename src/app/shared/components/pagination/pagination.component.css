@@ -1,0 +1,39 @@
+.pagination-container{
+    display: grid;
+    grid-template-columns: 80px 70px min-content 90px;
+}
+
+.pagination-container > *{
+    align-self: center;
+}
+
+.text{
+    padding: 4px 6px;
+}
+
+.go-to-page-container{
+    border : 1px solid #eeeeee;
+    border-radius: 6px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 40px;
+    min-height:32px;
+    
+}
+
+d-simple-dropdown,
+.go-to-page-container,
+.page-item-container{
+    height:100%;
+}
+
+.go-to-page-container > input {
+    width:100%;
+    padding: 0 6px;
+}
+
+button{
+    background-color: transparent;
+    border:none;
+}
+

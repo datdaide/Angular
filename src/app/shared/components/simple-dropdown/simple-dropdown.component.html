@@ -1,0 +1,11 @@
+<div class="simple-dd-container">
+  <div class="selected-item" (click)="toggleItemList()">
+    <span>{{ selectedItem | performObject : textKey }}</span>
+    <i class="fas fa-caret-down"></i>
+  </div>
+  <ul class="item-container" [style.display]="showItems ? 'block' : 'none'">
+    <li class="item" *ngFor="let item of items" (click)="onItemClick(item)">
+      {{ item | performObject : textKey  }}
+    </li>
+  </ul>
+</div>
